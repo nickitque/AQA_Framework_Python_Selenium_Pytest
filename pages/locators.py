@@ -27,3 +27,12 @@ class HomePageLocators:
     CF_PHONE_FIELD = (By.CSS_SELECTOR, "#wpcf7-f179-o1 > form > label:nth-child(3) > span > input")
     CF_MESSAGE_FIELD = (By.CSS_SELECTOR, "#wpcf7-f179-o1 > form > label.textarea-label > span > textarea")
     CF_SEND_BTN = (By.CSS_SELECTOR, "#wpcf7-f179-o1 > form > input")
+    FIRST_PROMOTION = (By.CSS_SELECTOR, "#other_deals > div > ul > li:nth-child(1) > a")
+    SECOND_PROMOTION = (By.CSS_SELECTOR, "#other_deals > div > ul > li:nth-child(2) > a")
+    THIRD_PROMOTION = (By.CSS_SELECTOR, "#other_deals > div > ul > li:nth-child(3) > a")
+    FOURTH_PROMOTION = (By.CSS_SELECTOR, "#other_deals > div > ul > li:nth-child(4) > a")
+
+
+class PromotionsPageLocators:
+    PROMOTION_DUE_DATE = (By.CSS_SELECTOR, "#page > main > section.main_section_deals > div:nth-child(1) > p")
+    BACK_TO_HOMEPAGE_BTN = (By.CSS_SELECTOR, "#page > main > section.main_section_deals > div:nth-child(1) > a")
