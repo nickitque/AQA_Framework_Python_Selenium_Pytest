@@ -1,13 +1,15 @@
 import pytest
 from pages.main_page import MainPage
+from pages.home_page import HomePage
 link = "https://takservice.pl/ru/"
 
-# @pytest.mark.xfail
-# def test_guest_can_go_to_login_page(browser):
-#     page = MainPage(browser, link)  # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
-#     page.open()  # открываем страницу
-#     page.go_to_login_page()  # выполняем метод страницы — переходим на страницу логина
-#     page.should_be_login_page()
+
+@pytest.mark.skip(reason=None)
+def test_guest_can_go_to_login_page(browser):
+    page = MainPage(browser, link)  # инициализируем Page Object, передаем в конструктор экземпляр драйвера и url адрес
+    page.open()  # открываем страницу
+    page.go_to_login_page()  # выполняем метод страницы — переходим на страницу логина
+    page.should_be_login_page()
 
 
 def test_guest_should_see_address_text(browser):
@@ -80,8 +82,7 @@ def test_guest_can_click_call_me_back_and_send_valid_data_to_cf(browser):
     page.fill_popup_contact_form_valid_data()
 
 
-def test_guest_can_click_call_me_back_and_send_invalid_data_cf(browser):
-    page = MainPage(browser, link)
+def test_guest_can_click_signup_btn(browser):
+    page = HomePage(browser, link)
     page.open()
-    page.click_call_back_header()
-    page.fill_popup_contact_form_invalid_data()
+    page.click_sign_up_button()

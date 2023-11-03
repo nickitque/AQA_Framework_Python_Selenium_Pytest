@@ -21,29 +21,9 @@ class BasePageLocators:
     POPUP_SEND_BTN = (By.CSS_SELECTOR, "#wpcf7-f182-o2 > form > input")
 
 
-class MainPageLocators:
-    LOGIN_LINK = (By.ID, "login_link")
-
-
-class LoginPageLocators:
-    LOGIN_FORM = (By.ID, "login_form")
-    REGISTRATION_FORM = (By.ID, "register_form")
-
-    """Слекторы полей формы регистрации"""
-    LOGIN_REGISTRATION = (By.CSS_SELECTOR, "#id_registration-email")
-    PASSWORD_REGISTRATION = (By.CSS_SELECTOR, "#id_registration-password1")
-    CONFIRM_PASSWORD = (By.CSS_SELECTOR, "#id_registration-password2")
-
-    REGISTRATION_BUTTON = (By.CSS_SELECTOR, "[name='registration_submit']")
-    LOGIN_IMAGE = (By.CSS_SELECTOR, ".icon-user")
-
-
-class ProductPageLocators:
-    ADD_TO_CART = (By.CLASS_NAME, "btn.btn-lg.btn-primary.btn-add-to-basket")
-    SUCCESS_MESSAGE = (By.XPATH, "/html/body/div[2]/div/div[1]/div[1]/div")
-    ALERT_INNER_DISCOUNT = (By.XPATH, "/html/body/div[2]/div/div[1]/div[2]/div")
-    SUCCESS_MASSAGE_LINK = (By.CSS_SELECTOR, ".alert-success")
-
-
-class BasketPageLocators:
-    CART_MESSAGE_EMPTY = (By.XPATH, "/html/body/div[2]/div/div[3]/div[2]/p")
+class HomePageLocators:
+    SIGN_UP_BTN = (By.CSS_SELECTOR, "#main-section > div > div > div.grid-bonus__content > a")
+    CF_NAME_FIELD = (By.CSS_SELECTOR, "#wpcf7-f179-o1 > form > label:nth-child(2) > span > input")
+    CF_PHONE_FIELD = (By.CSS_SELECTOR, "#wpcf7-f179-o1 > form > label:nth-child(3) > span > input")
+    CF_MESSAGE_FIELD = (By.CSS_SELECTOR, "#wpcf7-f179-o1 > form > label.textarea-label > span > textarea")
+    CF_SEND_BTN = (By.CSS_SELECTOR, "#wpcf7-f179-o1 > form > input")
