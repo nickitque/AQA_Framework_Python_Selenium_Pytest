@@ -4,6 +4,11 @@ from selenium.common.exceptions import TimeoutException
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 from .locators import BasePageLocators
+import time
+
+name = "Nikita_Test"
+phone = "+48 111 111 111"
+message = "Test message using Python and Selenium."
 
 
 class BasePage:
@@ -44,9 +49,53 @@ class BasePage:
         assert (messenger_text.get_attribute('href')) == "https://m.me/takservicepoznan", \
             "The messenger link is different"
 
-    def check_message_in_cart(self):
-        empty_cart_message = (self.browser.find_element(*BasePageLocators.CART_MESSAGE_EMPTY)).text
-        assert "Your basket is empty" in empty_cart_message
+    def click_logo_header(self):
+        logo_header = self.browser.find_element(*BasePageLocators.LOGO_HEADER)
+        logo_header.click()
+        assert self.browser.current_url == "https://takservice.pl/ru/", "The url is not https://takservice.pl/ru/"
+
+    def check_url_in_logo_header(self):
+        logo_header = self.browser.find_element(*BasePageLocators.LOGO_HEADER)
+        assert (logo_header.get_attribute('href')) == "https://takservice.pl/ru/", \
+            "The logo link is not https://takservice.pl/ru/"
+
+    def click_services_header(self):
+        services_header = self.browser.find_element(*BasePageLocators.SERVICES_HEADER)
+        services_header.click()
+        assert self.browser.current_url == "https://takservice.pl/ru/#services_section", \
+            "The url is not https://takservice.pl/ru/#services_section"
+
+    def click_about_us_header(self):
+        about_us_header = self.browser.find_element(*BasePageLocators.ABOUT_US_HEADER)
+        about_us_header.click()
+        assert self.browser.current_url == "https://takservice.pl/ru/#team_section", \
+            "The url is not https://takservice.pl/ru/#team_section"
+
+    def click_reviews_header(self):
+        reviews_header = self.browser.find_element(*BasePageLocators.REVIEWS_HEADER)
+        reviews_header.click()
+        assert self.browser.current_url == "https://takservice.pl/ru/#testimonials_section", \
+            "The url is not https://takservice.pl/ru/#testimonials_section"
+
+    def click_contacts_header(self):
+        contacts_header = self.browser.find_element(*BasePageLocators.CONTACTS_HEADER)
+        contacts_header.click()
+        assert self.browser.current_url == "https://takservice.pl/ru/#contact_section", \
+            "The url is not https://takservice.pl/ru/#contact_section"
+
+    def click_call_back_header(self):
+        call_back = self.browser.find_element(*BasePageLocators.CALL_BACK_HEADER)
+        call_back.click()
+
+    def fill_popup_contact_form_valid_data(self):
+        self.browser.find_element(*BasePageLocators.POPUP_NAME_FIELD).send_keys("Nikita_Test")
+        self.browser.find_element(*BasePageLocators.POPUP_PHONE_FIELD).send_keys("+48 111 111 111")
+        self.browser.find_element(*BasePageLocators.POPUP_MESSAGE_FIELD).send_keys("Test message using Python and Selenium.")
+        self.browser.find_element(*BasePageLocators.POPUP_SEND_BTN).click()
+        time.sleep(5)
+        #add assertion here
+
+
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
