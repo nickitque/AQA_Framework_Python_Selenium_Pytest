@@ -14,11 +14,24 @@ class BasePageLocators:
     ABOUT_US_BTN_HEADER = (By.CSS_SELECTOR, "#menu-item-49 > a")
     REVIEWS_BTN_HEADER = (By.CSS_SELECTOR, "#menu-item-52 > a")
     CONTACTS_BTN_HEADER = (By.CSS_SELECTOR, "#menu-item-53 > a")
+    LOGO_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row1 > a")
+    ADDRESS_TEXT_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(1) > a")
+    ADDRESS_ICON_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(1) > a > img")
+    SCHEDULE_ICON_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(2) > img")
+    SCHEDULE_TEXT_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(2) > #text")
+    # question about prev locator
+    PHONE_NUMBER_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(3) > a")
+    PHONE_NUMBER_ICON_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(3) > a > img")
+    EMAIL_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(4) > a")
+    EMAIL_LOGO_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(4) > a > img")
+
+
     CALL_BACK_BTN_HEADER = (By.CSS_SELECTOR, "#wrapper-navbar > div.header.header2 > div > button")
     POPUP_NAME_FIELD = (By.CSS_SELECTOR, "#wpcf7-f182-o2 > form > label:nth-child(2) > span > input")
     POPUP_PHONE_FIELD = (By.CSS_SELECTOR, "#wpcf7-f182-o2 > form > label:nth-child(3) > span > input")
     POPUP_MESSAGE_FIELD = (By.CSS_SELECTOR, "#wpcf7-f182-o2 > form > label.textarea-label > span > textarea")
     POPUP_SEND_BTN = (By.CSS_SELECTOR, "#wpcf7-f182-o2 > form > input")
+
 
 
 class HomePageLocators:
