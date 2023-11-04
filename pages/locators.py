@@ -49,3 +49,15 @@ class HomePageLocators:
 class PromotionsPageLocators:
     PROMOTION_DUE_DATE = (By.CSS_SELECTOR, "#page > main > section.main_section_deals > div:nth-child(1) > p")
     BACK_TO_HOMEPAGE_BTN = (By.CSS_SELECTOR, "#page > main > section.main_section_deals > div:nth-child(1) > a")
+
+class SeoPageLocators:
+    ROBOTS_TEXT = (By.CSS_SELECTOR, "body > pre")
+    PAGE_CATEGORY = (By.CSS_SELECTOR, "#sitemap > tbody > tr:nth-child(1) > td:nth-child(1) > a")
+    DEALS_CATEGORY = (By.CSS_SELECTOR, "#sitemap > tbody > tr:nth-child(2) > td:nth-child(1) > a")
+    HOMEPAGE_URL = (By.CSS_SELECTOR, "#sitemap > tbody > tr:nth-child(1) > td:nth-child(1) > a")
+    PRIVACY_URL = (By.CSS_SELECTOR, "#sitemap > tbody > tr:nth-child(2) > td:nth-child(1) > a")
+    DEALS_TO15_URL = (By.CSS_SELECTOR, "#sitemap > tbody > tr:nth-child(1) > td:nth-child(1) > a")
+    DEALS_CHECK0ZL_URL = (By.CSS_SELECTOR, "#sitemap > tbody > tr:nth-child(2) > td:nth-child(1) > a")
+    DEALS_DIAGNOSTICS0ZL_URL = (By.CSS_SELECTOR, "#sitemap > tbody > tr:nth-child(3) > td:nth-child(1) > a")
+    DEALS_TAKCLUB_URL = (By.CSS_SELECTOR, "#sitemap > tbody > tr:nth-child(4) > td:nth-child(1) > a")
+
