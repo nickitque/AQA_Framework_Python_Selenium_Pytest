@@ -14,7 +14,7 @@
 <p dir="auto"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;conftest.py&nbsp;&nbsp;</strong># Configuration for tests. Implemented browser fixture.</p>
 <p dir="auto"><strong><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</strong>test_home_page.py&nbsp;&nbsp;</strong># Test file, contains functions, that reuse methods from pages folder.</p>
 <p dir="auto"><strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;{other tests}&nbsp;&nbsp;</strong># Other test files, they contains functions, that reuse methods from pages folder.</p>
-<h3 dir="auto">About Page-Object Pattern:</h3>
+<h2 dir="auto">About Page-Object Pattern:</h2>
 <p>Page Object is a Design Pattern that is popular in test automation for enhancing test maintenance and reducing code duplication. The tests use the methods of the page object class whenever they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don&rsquo;t need to change, only the code within the page object needs to change. Subsequently, all changes to support that new UI are located in one place.</p>
-<h3>About product:</h3>
+<h2>About the product:</h2>
 <p>&nbsp;</p>
