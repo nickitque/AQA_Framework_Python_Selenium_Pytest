@@ -1,3 +1,4 @@
 <h2 dir="auto">Automated Testing framework for Takservice.pl website</h2>
 <p dir="auto">This is&nbsp;testing framework with using Python, OOP, Selenium, Pytest and Page Object methodology.</p>
 <p dir="auto">To install all packages from requirements.txt use command:&nbsp;<strong>pip install -r requirements.txt</strong></p>
+<p>Page Object is a Design Pattern that is popular in test automation for enhancing test maintenance and reducing code duplication. The tests use the methods of the page object class whenever they need to interact with the UI of that page. The benefit is that if the UI changes for the page, the tests themselves don’t need to change, only the code within the page object needs to change. Subsequently, all changes to support that new UI are located in one place.</p>
