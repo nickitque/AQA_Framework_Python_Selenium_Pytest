@@ -1,4 +1,3 @@
-import pytest
 from pages.home_page import HomePage
 link = "https://takservice.pl/ru/"
 
@@ -26,7 +25,7 @@ def test_guest_should_see_address_icon(browser):
 
 
 def test_guest_should_see_phone_text(browser):
-    """Test to validate the presence of phone number text and validation."""
+    """Test for validating phone number text in header."""
     page = HomePage(browser, link)  # initialize the Object, pass a driver instance to the constructor
     page.open()
     page.should_be_phone_text()
@@ -125,3 +124,31 @@ def test_guest_can_click_fourth_promotion_card(browser):
     page = HomePage(browser, link)
     page.open()
     page.click_fourth_promotion_card()
+
+
+def test_guest_can_see_address_in_footer(browser):
+    """Test for validating address text in footer."""
+    page = HomePage(browser, link)
+    page.open()
+    page.check_address_text_footer()
+
+
+def test_guest_can_see_working_hours_in_footer(browser):
+    """Test for validating working hours text in footer."""
+    page = HomePage(browser, link)
+    page.open()
+    page.check_working_hours_text_footer()
+
+
+def test_guest_can_see_phone_number_in_footer(browser):
+    """Test for validating phone number text in footer."""
+    page = HomePage(browser, link)
+    page.open()
+    page.check_address_text_footer()
+
+
+def test_guest_can_see_email_in_footer(browser):
+    """Test for validating email text in footer."""
+    page = HomePage(browser, link)
+    page.open()
+    page.check_email_text_footer()

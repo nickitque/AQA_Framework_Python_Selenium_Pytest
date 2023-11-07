@@ -85,6 +85,22 @@ class BasePage:
         time.sleep(5)
         # add assertion here
 
+    def check_address_text_footer(self):
+        address_text = self.browser.find_element(*BasePageLocators.ADDRESS_TEXT_FOOTER)
+        assert address_text.text == "ул. Składowa 33, Przezmierowo", "The address number text is different"
+
+    def check_working_hours_text_footer(self):
+        working_hours_text = self.browser.find_element(*BasePageLocators.SCHEDULE_TEXT_FOOTER)
+        assert working_hours_text.text == "Пн - Пт: 8:30 - 17:00", "The schedule text is different"
+
+    def check_phone_text_footer(self):
+        phone_number_text = self.browser.find_element(*BasePageLocators.PHONE_NUMBER_FOOTER)
+        assert phone_number_text.text == "+48 66 40 40 599", "The phone number text is different"
+
+    def check_email_text_footer(self):
+        email_text = self.browser.find_element(*BasePageLocators.EMAIL_FOOTER)
+        assert email_text.text == "info@takservice.com", "The email text is different"
+
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)
