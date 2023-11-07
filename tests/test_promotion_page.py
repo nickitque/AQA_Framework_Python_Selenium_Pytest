@@ -6,30 +6,35 @@ endpoints = ["to15/", "check0zl/", "diagnostics0zl/", "takclub/"]
 
 
 def test_guest_can_visit_home_page_from_first_endpoint(browser):
+    """Test for clicking the 'back to homepage' button."""
     page = PromotionsPage(browser, link + endpoints[0])
     page.open()
     page.click_back_to_homepage_button()
 
 
 def test_guest_can_visit_home_page_from_second_endpoint(browser):
+    """Test for clicking the 'back to homepage' button."""
     page = PromotionsPage(browser, link + endpoints[1])
     page.open()
     page.click_back_to_homepage_button()
 
 
 def test_guest_can_visit_home_page_from_third_endpoint(browser):
+    """Test for clicking the 'back to homepage' button."""
     page = PromotionsPage(browser, link + endpoints[2])
     page.open()
     page.click_back_to_homepage_button()
 
 
 def test_guest_can_visit_home_page_from_fourth_endpoint(browser):
+    """Test for clicking the 'back to homepage' button."""
     page = PromotionsPage(browser, link + endpoints[3])
     page.open()
     page.click_back_to_homepage_button()
 
 
 def test_guest_can_click_call_back_button_and_fill_cf(browser):
+    """needs update because of the selectors"""
     page = PromotionsPage(browser, link + endpoints[0])
     page.open()
     page.click_call_back_header()

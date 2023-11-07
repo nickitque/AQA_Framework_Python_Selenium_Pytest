@@ -1,6 +1,5 @@
 from .base_page import BasePage
 from .locators import HomePageLocators
-import time
 
 
 class HomePage(BasePage):

@@ -24,8 +24,6 @@ class BasePageLocators:
     PHONE_NUMBER_ICON_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(3) > a > img")
     EMAIL_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(4) > a")
     EMAIL_LOGO_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(4) > a > img")
-
-
     CALL_BACK_BTN_HEADER = (By.CSS_SELECTOR, "#wrapper-navbar > div.header.header2 > div > button")
     POPUP_NAME_FIELD = (By.CSS_SELECTOR, "#wpcf7-f182-o2 > form > label:nth-child(2) > span > input")
     POPUP_PHONE_FIELD = (By.CSS_SELECTOR, "#wpcf7-f182-o2 > form > label:nth-child(3) > span > input")
