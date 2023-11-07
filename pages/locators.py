@@ -59,3 +59,8 @@ class SeoPageLocators:
     DEALS_DIAGNOSTICS0ZL_URL = (By.CSS_SELECTOR, "#sitemap > tbody > tr:nth-child(3) > td:nth-child(1) > a")
     DEALS_TAKCLUB_URL = (By.CSS_SELECTOR, "#sitemap > tbody > tr:nth-child(4) > td:nth-child(1) > a")
 
+class Page404Locators:
+    SUBTITLE = (By.CSS_SELECTOR, "#page > div.error_block > div > div > div._suptitle")
+    ERROR_CODE = (By.CSS_SELECTOR, "#page > div.error_block > div > div > div.error_code")
+    MESSAGE = (By.CSS_SELECTOR, "#page > div.error_block > div > div > div._message")
+    BACK_TO_HOMEPAGE_BTN = (By.CSS_SELECTOR, "#page > div.error_block > div > div > a")
