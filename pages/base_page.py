@@ -101,6 +101,29 @@ class BasePage:
         email_text = self.browser.find_element(*BasePageLocators.EMAIL_FOOTER)
         assert email_text.text == "info@takservice.com", "The email text is different"
 
+    def check_info_text_footer(self):
+        info_text = self.browser.find_element(*BasePageLocators.INFO_TEXT_FOOTER)
+        result = " ".join(line.strip() for line in info_text.text.splitlines())
+        assert result == "Tak Service Sp. z o.o. NIP: 7831866906 VAT: " \
+                         "PL7831866906 REGON: 523481530 EORI: PL783186690600000", "The info text is different"
+
+    def check_about_text_footer(self):
+        about_text = self.browser.find_element(*BasePageLocators.ABOUT_TEXT_FOOTER)
+        assert about_text.text == "СТО в Познани TAK service - надежный автосервис, предлагающий высококачественные услуги по ремонту " \
+                                  "и обслуживанию автомобилей. Наша команда опытных специалистов обеспечит профессиональный подход к вашему автомобилю.", "The about text is different"
+
+    def click_call_back_btn_footer(self):
+        call_me_back_btn = self.browser.find_element(*BasePageLocators.CALL_BACK_BTN_FOOTER)
+        call_me_back_btn.click()
+
+    def click_instagram_btn_footer(self):
+        email_text = self.browser.find_element(*BasePageLocators.EMAIL_FOOTER)
+        assert email_text.text == "info@takservice.com", "The email text is different"
+
+    def click_facebook_btn_footer(self):
+        email_text = self.browser.find_element(*BasePageLocators.EMAIL_FOOTER)
+        assert email_text.text == "info@takservice.com", "The email text is different"
+
     def is_element_present(self, how, what):
         try:
             self.browser.find_element(how, what)

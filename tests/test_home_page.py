@@ -1,8 +1,9 @@
 from pages.home_page import HomePage
 link = "https://takservice.pl/ru/"
 
-
 # @pytest.mark.skip(reason=None):
+
+
 def test_guest_can_visit_home_page(browser):
     """Opening the page."""
     page = HomePage(browser, link)
@@ -82,7 +83,7 @@ def test_guest_can_click_contacts_in_header(browser):
     page.click_contacts_header()
 
 
-def test_guest_can_click_call_me_back_and_send_valid_data_to_cf(browser):
+def test_guest_can_click_call_back_and_send_valid_data_to_cf(browser):
     """Test for clicking the call me back btn, filling and sending CF in Pop-up."""
     page = HomePage(browser, link)
     page.open()
@@ -152,3 +153,25 @@ def test_guest_can_see_email_in_footer(browser):
     page = HomePage(browser, link)
     page.open()
     page.check_email_text_footer()
+
+
+def test_guest_can_see_info_text_in_footer(browser):
+    """Test for validating info text in footer."""
+    page = HomePage(browser, link)
+    page.open()
+    page.check_info_text_footer()
+
+
+def test_guest_can_see_about_text_in_footer(browser):
+    """Test for validating info text in footer."""
+    page = HomePage(browser, link)
+    page.open()
+    page.check_about_text_footer()
+
+
+def test_guest_can_can_click_call_back_btn_and_fill_cf_footer(browser):
+    """Test for clicking call me back button and filling the CF."""
+    page = HomePage(browser, link)
+    page.open()
+    page.click_call_back_btn_footer()
+    page.fill_popup_contact_form_valid_data()

@@ -32,6 +32,11 @@ class BasePageLocators:
                                                  " ul.footer_about_address > li:nth-child(3) > a > img")
     EMAIL_FOOTER = (By.CSS_SELECTOR,
                     "#page > footer > div > div.footer-row.row2 > ul.footer_about_address > li:nth-child(4) > a")
+    INFO_TEXT_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > div.info")
+    ABOUT_TEXT_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > div.footer_about_text")
+    CALL_BACK_BTN_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row1 > button")
+    INSTAGRAM_LINK_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_iconLinks > li:nth-child(1) > a")
+    FACEBOOK_LINK_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 > ul.footer_about_iconLinks > li:nth-child(2) > a")
     EMAIL_LOGO_FOOTER = (By.CSS_SELECTOR, "#page > footer > div > div.footer-row.row2 >"
                                           " ul.footer_about_address > li:nth-child(4) > a > img")
     CALL_BACK_BTN_HEADER = (By.CSS_SELECTOR, "#wrapper-navbar > div.header.header2 > div > button")
