@@ -15,7 +15,7 @@ class BasePage:
         self.browser.get(self.url)
 
     def should_be_address_text(self):
-        assert self.is_element_present(*BasePageLocators.ADDRESS_TEXT_HEADER), "Login link is not presented"
+        assert self.is_element_present(*BasePageLocators.ADDRESS_TEXT_HEADER), "Address text is not presented"
 
     def should_be_address_icon(self):
         assert self.is_element_present(*BasePageLocators.ADDRESS_ICON_HEADER), "Login link is not presented"

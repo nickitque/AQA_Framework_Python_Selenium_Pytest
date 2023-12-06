@@ -1,4 +1,5 @@
 from pages.home_page import HomePage
+import pytest
 link = "https://takservice.pl/ru/"
 
 # @pytest.mark.skip(reason=None):
@@ -83,6 +84,7 @@ def test_guest_can_click_contacts_in_header(browser):
     page.click_contacts_header()
 
 
+@pytest.mark.skip(reason="will be tested manually")
 def test_guest_can_click_call_back_and_send_valid_data_to_cf(browser):
     """Test for clicking the call me back btn, filling and sending CF in Pop-up."""
     page = HomePage(browser, link)
@@ -91,6 +93,7 @@ def test_guest_can_click_call_back_and_send_valid_data_to_cf(browser):
     page.fill_popup_contact_form_valid_data()
 
 
+@pytest.mark.skip(reason="will be tested manually")
 def test_guest_can_click_signup_btn_and_send_cf(browser):
     """Test for clicking the call me back btn, filling and sending CF."""
     page = HomePage(browser, link)
@@ -169,6 +172,7 @@ def test_guest_can_see_about_text_in_footer(browser):
     page.check_about_text_footer()
 
 
+@pytest.mark.skip(reason="will be tested manually")
 def test_guest_can_can_click_call_back_btn_and_fill_cf_footer(browser):
     """Test for clicking call me back button and filling the CF."""
     page = HomePage(browser, link)
